@@ -1,46 +1,116 @@
+# Blockchain-Based Voting System
+
+A decentralized voting system prototype built on Ethereum to ensure transparency, immutability, and security in university-level elections.
+
+This dApp uses **Solidity** smart contracts for vote storage + **React / Web3.js** for the UI, with **Truffle** for compilation and deployment.
+
+---
+
+## 🚀 Features
+- Smart contract for voter registration and casting votes  
+- Each vote is recorded as an immutable blockchain transaction  
+- React-based frontend connected using Web3.js  
+- SQLite used for temporary storage before commit  
+- Prevents duplicate voting and unauthorized access  
+
+---
+
+## 🧰 Tech Stack
+
+### **Smart Contracts**
+- Solidity  
+- Truffle  
+- Ganache / Testnet  
+
+### **Frontend**
+- React.js  
+- Web3.js  
+- JavaScript  
+
+### **Backend/Config**
+- Node.js  
+- SQLite  
+
+---
+
+## 📁 Folder Structure
+
+blockchain-voting-system/
 
 
-# Blockchain Voting System
-![image](https://github.com/user-attachments/assets/fcf68b24-80a2-4948-a082-80308ed2c9a3)
+├── backend/
+
+│ ├── contracts/ # Solidity smart contracts
+
+│ ├── migrations/ # Deployment scripts
+
+│ ├── scripts/ # Optional automation scripts
+
+│ ├── test/ # Contract tests
+
+│ ├── package.json
+
+│ └── truffle-config.js
 
 
-# Overview
+|
+└── frontend/
 
-The Blockchain Voting System is a decentralized application (dApp) that utilizes blockchain technology to ensure secure, transparent, and tamper-proof voting processes. This system leverages the Ethereum blockchain to create an immutable record of votes, offering a reliable and trustworthy solution for digital elections.
+├── src/
 
-# Features
+│ ├── abis/ # Compiled contract ABI (Voting.json)
 
+│ ├── components/ # React components (App.js, VotingForm.js)
 
-1. Decentralized Voting: Utilizes blockchain to securely record and protect votes from tampering.
+│ └── pages/ # HomePage.js, ResultsPage.js
 
-2. Candidate Management: Supports the addition and management of multiple candidates.
+├── package.json
 
-3.Vote Casting: Ensures each voter can cast only one vote, preventing double voting.
+└── public/
 
-4. Real-Time Results: Provides up-to-date results, displaying vote counts for each candidate.
+## 🛠️ How to Run the Project
 
-# Technologies
-1. Smart Contracts: Developed using Solidity and deployed on the Ethereum blockchain.
+```bash
+# 1. Install Backend Dependencies
+cd backend
+npm install
 
-2.Backend: Implemented with Truffle for smart contract development and testing.
+# 2. Compile Smart Contracts
+truffle compile
 
-3.Frontend: Built with React and interacts with Ethereum smart contracts via Web3.js.
+# 3. Deploy Contracts (Ganache or Testnet)
+truffle migrate --reset
 
-4. Testing: Includes comprehensive unit tests for verifying smart contract functionality.
-# Getting Started
+# 4. Install Frontend Dependencies
+cd ../frontend
+npm install
 
-To get started with this project, follow these steps:
+# 5. Start the React Frontend
+npm start
 
-1.Clone the Repository: Obtain a copy of the code by cloning the repository to your local machine.
+# 6. MetaMask Setup (Manual Steps)
+# - Add Ganache/Testnet RPC Network
+# - Import Ganache test accounts
+# - Interact with the voting UI
 
-2. Install Dependencies: Set up the necessary dependencies for both the backend and frontend.
+-------
+# My Contribution
 
-3.Configure Ethereum Client: Start an Ethereum client like Ganache for local development.
+Built Solidity smart contracts for voting workflow
 
-4.Deploy Smart Contracts: Compile and deploy the smart contracts to the local blockchain.
+Developed React UI for vote casting and result display
 
-5.Run the Application: Launch the frontend application to interact with the deployed contracts.
-# Usage and Concept Map
-![image](https://github.com/user-attachments/assets/db8d7d71-1238-40a6-89d3-7e373d7cc39d)
+Integrated Web3.js for blockchain connectivity
+
+Managed database logic using SQLite
+
+Configured Truffle for contract compilation and deployment
+
+# Notes
+
+This is a prototype for learning and demonstration
+
+Not intended for production voting system
+
 
 
